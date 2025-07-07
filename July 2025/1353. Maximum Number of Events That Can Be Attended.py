@@ -1,6 +1,6 @@
 class Solution(object):
     def maxEvents(self, events):
-        #method DSU(Disjoint Set Union) Datastructure used for greedy search related to this problem 
+        #Method DSU(Disjoint Set Union) Datastructure used for greedy search related to this problem 
         def find(day):
             if li[day]!=day:
                 li[day]=find(li[day])
@@ -11,8 +11,9 @@ class Solution(object):
         
         mx=max(e[1] for e in events)
         li=list(range(mx+2))
+        
         ans=0
-
+        
         for start_day,end_day in events:
             x=find(start_day)
             if x<=end_day:
