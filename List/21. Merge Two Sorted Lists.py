@@ -5,8 +5,8 @@ class ListNode(object):
          self.next = next
 class Solution(object):
     def mergeTwoLists(self, list1, list2):
-        dummy=ListNode()
-        cur=dummy
+        dummy=ListNode() 
+        cur=dummy # holding the values in a duplicate the returming the values from the real one
         while list1 and list2:
             if list1.val>list2.val:
                 cur.next=list2
